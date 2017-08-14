@@ -3,7 +3,6 @@ NOTE: OUTPUT PATTERN IS NOT FULLY ACCORDING TO uva.onlinejudge.org
 */
 
 
-
 #include <stdio.h>
 
 /*
@@ -79,10 +78,10 @@ void mineFinder(){
 			for(j=0; j<n[q]; j++){
 				if(a[k][i][j]!='*'){
 
-					/* CHECKING ELEMENTS AROUND PRESENT ELEMENT*/
+					/* CHECKING 8 ELEMENTS AROUND PRESENT ELEMENT*/
 					for (x= i-1; x < (i+2); ++x){
-						for (y= j-1; y < (j+2) ; ++y){
-							if( a[k][x][y]=='*' ){					/* FOUND A MINE :) */ 
+						for (y= j-1; y < (j+2) ; ++y){	/* CONSIDER SITUATIONS  WHEN x,y GOES OUT OF BOUNDS */
+							if( a[k][x][y]=='*' ){			/* FOUND A MINE :) */ 
 								if(a[k][i][j]=='0')				
 									{a[k][i][j]='1';}
 								else if(a[k][i][j]=='1')	
