@@ -29,18 +29,15 @@ void input(){
 	printf("\n\n");
 	scanf("%d%d", &m[p], &n[q]);
 
-	while(m[p]!=0 && n[q]!=0){
-		
+	while(m[p]!=0 && n[q]!=0){	
 		for(i=0;i<m[p];i++){
 			scanf("%s", a[k][i]);
 		}
 		k++;
-
 		p++; q++;
 		printf("\n");
 		scanf("%d%d", &m[p], &n[q]);
 	}
-
 	temp=k; km=p-1; kn=q-1;
 	p=0; q=0;
 }
@@ -52,7 +49,7 @@ VARIABLES USED
 k,temp,m,n,p,q,i,j
 */
 void mineReset(){
-
+	
 	p=0; q=0;
 	for(k=0; k<temp; k++){
 		for(i=0; i<m[p]; i++){
@@ -136,12 +133,12 @@ void display(){
 
 int main(void){
 	
-		input();
-		display();
-		mineReset();
-		display();
-		mineFinder();
-		display();
+	input();
+	display();
+	mineReset();
+	display();
+	mineFinder();
+	display();
 	return 0;
 }
 
